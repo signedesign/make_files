@@ -1,0 +1,1 @@
+make_files is a collection of drush_make includes for specific use with installation profiles in use by signedesign. Most of them are not yet up to date. If you try to use them and find make files with missing patches or updates, please feel free to notify me in the issue que.
