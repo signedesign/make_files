@@ -3,7 +3,7 @@
 ; Provides standard interface enhancements.
 
 ; Include requirements
-  includes[interface-requirements] = "https://github.com/signedesign/make_files/raw/master/signedesign/interface-requirements.make"
+  includes[interface-requirements] = "https://github.com/signedesign/make_files/raw/master/6/signedesign/interface-requirements.make"
   ; contains libraries
   ; contains mimedetect
   ; contains filefield
