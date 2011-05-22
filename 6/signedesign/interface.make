@@ -3,7 +3,7 @@
 ; Provides standard interface enhancements.
 
 ; Include requirements
-  includes[interface-requirements] = "interface-requirements.make"
+  includes[interface-requirements] = "https://github.com/signedesign/make_files/raw/master/signedesign/interface-requirements.make"
   ; contains libraries
   ; contains mimedetect
   ; contains filefield
@@ -11,7 +11,7 @@
   ; contains imagecache
 
 
-jQuery
+;jQuery
 
 ; jQuery Update
   projects[jquery_update][subdir] = "contrib/signedesign"
@@ -19,18 +19,13 @@ jQuery
   ; requires libraries api
   ; requires patch for jquery 1.4
     ; http://drupal.org/node/685060#comment-3560918
-    projects[jquery_update][patch][] = "http://drupal.org/files/issues/jquery_update_775924_1.patch"
-    ; requires patch for drupal 6.19
-      ; http://drupal.org/node/479368#comment-3410894
-      projects[drupal][patch][] = "http://drupal.org/files/issues/do479468-drupal_to_js-expanded-comments-nostatic.patch"
-
-; jQuery Update for 1.5.2 support
-  projects[jquery_update][subdir] = "contrib/signedesign"
-  projects[jquery_update][version] = "2.x-dev"
-  ; requires libraries api
-  ; requires patch for jquery 1.5.2
-
-
+      projects[jquery_update][patch][] = "http://drupal.org/files/issues/jquery_update_775924_1.patch"
+    ; requires patch for proper json encoding
+      ; http://drupal.org/node/479368#comment-4091306 -->
+      ; http://drupal.org/node/1086098#comment-4185764
+      projects[drupal][patch][] = "http://drupal.org/files/issues/drupal_to_js_proper_json-D6_0.patch"
+    ; requires include for jquery 1.5
+    ; http://drupal.org/files/issues/jquery_update_jQuery_1.5_0.zip
 
 ; jQuery UI
   ; see patched modules (provides jquery ui 1.8 integration)
@@ -52,7 +47,8 @@ jQuery
     libraries[jquery.ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery-ui-1.8.6.zip"
     ; location jquery.ui required because of http://drupal.org/node/489140#comment-3362794 (date module)
 
-http://drupal.org/files/issues/tabledrag_1.5.patch
+; http://drupal.org/node/893538#comment-4255934
+; http://drupal.org/files/issues/tabledrag_1.5.patch
 
 ; Widgets
 
@@ -62,15 +58,15 @@ http://drupal.org/files/issues/tabledrag_1.5.patch
 
 ; Hierarchical Select
   projects[hierarchical_select][subdir] = "contrib"
-  projects[hierarchical_select][version] = "3.6"
+  projects[hierarchical_select][version] = "3.7"
 
 ; Hierarchical Select Node Reference
   projects[hs_nodereference][subdir] = "contrib"
-  projects[hs_nodereference][version] = "1.0"
+  projects[hs_nodereference][version] = "1.x-dev"
 
 ; Node Reference URL Widget
   projects[nodereference_url][subdir] = "contrib/signedesign"
-  projects[nodereference_url][version] = "1.6"
+  projects[nodereference_url][version] = "1.11"
 
 
 ; Admin interface improvements
@@ -86,12 +82,12 @@ http://drupal.org/files/issues/tabledrag_1.5.patch
   projects[vertical_tabs][version] = "1.0-rc1"
 
 ; Vertical Tabs Default Tab
-  projects[vt_defaults][subdir] = "contrib"
-  projects[vt_defaults][version] = "1.0-rc3"
+  projects[vt_default][subdir] = "contrib"
+  projects[vt_default][version] = "1.0-rc3"
 
 ; Custom Breadcrumbs
   projects[custom_breadcrumbs][subdir] = "contrib"
-  projects[custom_breadcrumbs][version] = "1.5"
+  projects[custom_breadcrumbs][version] = "2.0-rc1"
 
 ; Read More Link
   projects[ed_readmore][subdir] = "contrib"
@@ -131,7 +127,7 @@ http://drupal.org/files/issues/tabledrag_1.5.patch
 ; Nodequeue
   ; Nodequeue allows a group of nodes to be sorted arbitrarily.
   projects[nodequeue][subdir] = "contrib"
-  projects[nodequeue][version] = "2.9"
+  projects[nodequeue][version] = "2.10"
 
 ; Styles
   Styles provides an api for styling fields based on the active mime type, stream or node reference.

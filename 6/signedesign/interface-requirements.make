@@ -5,7 +5,7 @@
 
 ; Libraries
   projects[libraries][subdir] = "contrib/signedesign"
-  projects[libraries][version] = "1.0-alpha1"
+  projects[libraries][version] = "1.0"
   ; required by jQuery Update
   ; required by jQuery UI
   ; included by interface.make
@@ -18,7 +18,7 @@
 
 ; Filefield
   projects[filefield][subdir] = "contrib"
-  projects[filefield][version] = "3.7"
+  projects[filefield][version] = "3.10"
   ; required by filefield_styles
   ; included by interface.make
   ; requires Mime Detect
@@ -26,13 +26,12 @@
 ; Image API
   ; Throws open php image transformations through use of either GD2 or Imagemagick to Drupal.
   projects[imageapi][subdir] = "contrib"
-  projects[imageapi][version] = "1.9"
+  projects[imageapi][version] = "1.10"
   ; required by imagecache
-  
+
 ; Imagecache
   projects[imagecache][subdir] = "contrib"
-  projects[imagecache][version] = "2.0-beta10"
+  projects[imagecache][version] = "2.0-beta12"
   ; required by filefield_styles
   ; included by interface.make
   ; requires imageapi gd2 1.9
-  
